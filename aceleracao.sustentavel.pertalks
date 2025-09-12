@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação - Pertalks 2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo customizado para a lista do roadmap */
+        .roadmap-list {
+            list-style: none;
+            counter-reset: roadmap-counter;
+            padding-left: 0;
+        }
+        .roadmap-list li {
+            counter-increment: roadmap-counter;
+            position: relative;
+            padding-left: 55px; /* Espaço para o número */
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-bottom: 1rem;
+            min-height: 44px;
+        }
+        .roadmap-list li::before {
+            content: counter(roadmap-counter);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px; /* rounded-full */
+            background-color: #f3f4f6; /* bg-gray-100 */
+            color: #1f2937; /* text-gray-800 */
+            font-weight: 700; /* font-bold */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            font-size: 1.125rem; /* text-lg */
+        }
+        /* Estilo para listas de ação na Seção 6 */
+        .action-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .action-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 1rem;
+            font-size: 1.125rem; /* text-lg */
+        }
+        .action-list li::before {
+            content: '\f058'; /* Font Awesome check-circle icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: #1f2937; /* text-gray-800 */
+            font-size: 1.25rem;
+        }
+        /* Estilo para a descrição do cronograma na Seção 9 */
+        .timeline-description {
+            font-size: 1.05rem; /* Aumenta um pouco a fonte */
+            color: #d1d5db; /* Um cinza mais claro para contraste */
+            border-left: 2px solid #374151; /* Borda lateral para separação */
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <main>
+
+        <!-- Seção 1: Capa (Hero) -->
+        <section id="hero" class="h-screen w-full flex flex-col items-center justify-center text-center bg-black text-white p-4">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight">Pertalks 2.0</h1>
+                <p class="mt-4 text-2xl md:text-3xl font-light text-gray-300">Aceleração sustentável</p>
+            </div>
+            <div class="absolute bottom-10 animate-bounce">
+                <a href="#analise">
+                    <i class="fas fa-chevron-down text-3xl text-white/50"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção 2: Análise Estratégica -->
+        <section id="analise" class="min-h-screen w-full bg-white py-20 px-6 flex items-center">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-black mt-2">Uma análise transparente do nosso caminho e do ponto de inflexão atual</h2>
+                </div>
+                
+                <div class="text-left max-w-4xl mx-auto space-y-6 text-gray-700 leading-relaxed">
+                    <p>A Pertalks escolheu um modelo de negócio muito eficiente: fazer as coisas acontecerem através de investimento externo.</p>
+                    <p>E a ideia com isso é apresentar uma tese redonda para o mercado, captar dinheiro e, através de uma ótima capacidade de execução, utilizar esse dinheiro para desenvolver a tese e montar uma empresa atrativa, para poder receber mais capital externo e continuar o ciclo de “desenvolvimento x captação”.</p>
+                    
+                    <h3 class="flex items-center gap-3 text-2xl font-semibold text-black pt-4"><i class="fas fa-road text-gray-400"></i>O roadmap comum de validação</h3>
+                    <p>O roadmap mais comum para uma estratégia como essa seria:</p>
+                    <ol class="roadmap-list mt-4">
+                        <li>Investir o mínimo possível para construir o MVP simplificado e testar com o público uma versão paga.</li>
+                        <li>Provar a tese na prática, mesmo que de forma minimalista.</li>
+                        <li>Ir para o mercado para captar investimento pre-seed e, só então, desenvolver a ideia.</li>
+                    </ol>
+                    <p>Ou seja, a primeira coisa que as startups costumam fazer é testar a venda, da forma mais rápida possível, para aí sim poderem captar investimento e começar a investir 5D, 6D, e assim em diante.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200 my-8">
+                        <h4 class="flex items-center gap-3 text-xl font-semibold text-black mb-3"><i class="fas fa-tachometer-alt text-gray-400"></i>A agilidade do mercado de infoprodutos</h4>
+                        <p class="text-gray-700">Para contextualizar, o mercado de infoprodutos opera com um ciclo de validação ultrarrápido:</p>
+                        <ul class="list-disc list-inside space-y-2 mt-4 text-gray-600">
+                            <li><strong>Oferta rápida:</strong> Cria-se e vende-se uma oferta em poucos dias, antes mesmo de o produto estar finalizado.</li>
+                            <li><strong>Feedback direto:</strong> Clientes insatisfeitos recebem reembolso e participam de longas chamadas de feedback para detalhar o produto ideal.</li>
+                            <li><strong>Validação ágil:</strong> A decisão de investir no desenvolvimento é baseada nesse feedback real, validando a demanda em dias, não em meses.</li>
+                        </ul>
+                        <p class="mt-4 text-gray-700">Este método de "vender primeiro, construir depois" acelera drasticamente o desenvolvimento e é um dos pilares do rápido crescimento financeiro do setor digital.</p>
+                    </div>
+                    
+                    <h3 class="flex items-center gap-3 text-2xl font-semibold text-black pt-4"><i class="fas fa-exclamation-triangle text-red-500"></i>A estratégia agressiva da Pertalks</h3>
+                    <p>Hoje em dia, um profissional na Índia lança um SaaS, pede para 20 a 30 amigos postarem um vídeo no TikTok e no Instagram, observa se as pessoas compram ou não e só depois investe. Mas a Pertalks optou por uma estratégia mais agressiva quando comparamos com os hábitos de mercado. A Pertalks já está na mídia, todos os membros da Pertalks já assumiram a iniciativa para o mundo, a Pertalks já construiu um produto, a Pertalks já captou dinheiro.</p>
+
+                    <div class="my-6 flex justify-center items-center gap-4 p-4 bg-gray-100 rounded-lg">
+                        <i class="far fa-clock text-3xl text-gray-500"></i>
+                        <span class="text-lg font-semibold text-gray-600">Desde 2022 sem vendas...</span>
+                    </div>
+
+                    <p>Porém, apesar de a Pertalks ter nascido no final de 2022, até hoje, a Pertalks não começou a vender. Logo no início, alocou recursos financeiros para desenvolvimento de tecnologia e PR para poder levantar os investimentos, antes mesmo de vender pela primeira vez.</p>
+                    
+                    <h3 class="flex items-center gap-3 text-2xl font-semibold text-black pt-4"><i class="fas fa-chart-line text-gray-400"></i>O risco de "dar certo"</h3>
+                    <p>E a estratégia que a Pertalks escolheu não está errada. Porém, não deixa de ser o contrário do método de validação tradicional das empresas de tecnologia. E o maior risco que a Pertalks correu quando decidiu ir por esse caminho não foi “dar errado”, mas sim “dar certo”! Pois, após captar investimento externo, só existem 2 caminhos para a Pertalks:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mt-6">
+                        <div class="bg-green-50 border border-green-200 p-6 rounded-lg">
+                            <h4 class="flex items-center gap-3 text-xl font-bold text-green-800"><i class="fas fa-check-circle"></i>Cenário positivo</h4>
+                            <p class="mt-2 text-gray-700">A Pertalks mostra que consegue executar o que vem prometendo nestes anos e adquire uma incrível autoridade com os investidores.</p>
+                        </div>
+                        <div class="bg-red-50 border border-red-200 p-6 rounded-lg">
+                             <h4 class="flex items-center gap-3 text-xl font-bold text-red-800"><i class="fas fa-times-circle"></i>Cenário negativo</h4>
+                            <p class="mt-2 text-gray-700">A Pertalks continua nessa velocidade, só consegue se sustentar sozinha em 2040 e, consequentemente, perde credibilidade com investidores, competidores e clientes.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção 3: Problems -->
+        <section id="problemas" class="min-h-screen w-full bg-black text-white py-20 px-6 flex items-center">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mt-2">O problema central...</h2>
+                    <p class="text-lg text-gray-300 mt-2">A ausência do motor que impulsiona o crescimento exponencial das startups.</p>
+                </div>
+                <div class="text-left max-w-4xl mx-auto space-y-6 text-gray-200 leading-relaxed">
+                    <p>As empresas de tecnologia só crescem absurdamente através de um framework muito simples, que o mercado de infoprodutos conhece muito bem, que é basicamente:</p>
+                    <div class="my-6 bg-gray-900 p-6 rounded-lg text-center">
+                        <p class="text-lg font-semibold tracking-wider text-white">
+                            <span class="inline-block">Idealização</span> <i class="fas fa-arrow-right text-gray-500 mx-2"></i>
+                            <span class="inline-block">Teste</span> <i class="fas fa-arrow-right text-gray-500 mx-2"></i>
+                            <span class="inline-block">Resultado</span> <i class="fas fa-arrow-right text-gray-500 mx-2"></i>
+                            <span class="inline-block">Análise</span> <i class="fas fa-arrow-right text-gray-500 mx-2"></i>
+                            <span class="inline-block">Otimização</span>
+                        </p>
+                    </div>
+                    <p>Quanto mais rápido a empresa realiza esse framework, mais ela se desenvolve, atinge o PMF e conquista mercado. E hoje, a Pertalks não tem a capacidade para fazer isso em nenhum aspecto (nem usuários B2B recorrentes, nem usuários B2C recorrentes, nem presença digital recorrente para fazer isso com marketing, nem em outros aspectos).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Consequências -->
+        <section id="consequencias" class="w-full bg-white py-20 px-6 flex items-center">
+            <div class="container mx-auto max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-black mt-2">O que acontecerá se não corrigirmos o rumo?</h2>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-lg text-center text-gray-600 mb-10">Se a Pertalks continuar nesse caminho, enfrentará os seguintes obstáculos:</p>
+                    <ul class="space-y-4 list-disc list-inside text-gray-700 text-lg">
+                        <li>Falta de clareza de direcionamento.</li>
+                        <li>Grande chance de não alcançar o PMF ou demorar muito para isso.</li>
+                        <li>Perda de credibilidade com o mercado (compradores e investidores).</li>
+                        <li>Dificuldade para vender as soluções.</li>
+                        <li>Entre outros...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção 5: Erros Comuns -->
+        <section id="erros_comuns" class="w-full bg-black text-white py-20 px-6 flex items-center">
+             <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-4xl font-bold text-white mt-2">Erros comuns na tentativa de solução</h2>
+                <div class="max-w-3xl mx-auto mt-8 text-left">
+                    <p class="text-lg text-gray-300 leading-relaxed">Quando uma empresa se vê nessa situação, os erros mais comuns são:</p>
+                    <ul class="list-disc list-inside space-y-4 my-6 text-xl">
+                        <li>Investir muito dinheiro em marketing.</li>
+                        <li>Implorar por parcerias com quem já tem relevância.</li>
+                    </ul>
+                    <p class="text-lg text-gray-400 leading-relaxed bg-gray-900 p-4 rounded-lg"><strong>Por que isso é um erro?</strong> Essas ações são ineficientes porque são caras e soam como desespero. Na verdade, o que os investidores buscam no time é inteligência, capacidade de fazer muito com pouco e, principalmente, desempenho e resultado prático.</p>
+                    <p class="mt-8 text-lg text-gray-300 leading-relaxed font-semibold">E por isso, através deste projeto, vamos resolver todos esses problemas no curto prazo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Plano de Ação -->
+        <section id="plano_acao" class="min-h-screen w-full bg-white py-20 px-6 flex items-center">
+            <div class="container mx-auto max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-black mt-2">Plano de ação</h2>
+                </div>
+                <div class="text-left max-w-3xl mx-auto space-y-8">
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                        <h3 class="flex items-center gap-3 text-xl font-bold text-black">
+                            <i class="fas fa-rocket text-gray-600"></i>
+                            Aumentar a capacidade e a velocidade do desenvolvimento da Pertalks
+                        </h3>
+                        <p class="mt-3 text-gray-700">Construir um funil de vendas, na prática. Com alto volume de captações, ativações de venda e otimizações do processo para aplicar o framework de desenvolvimento acelerado.</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                        <h3 class="flex items-center gap-3 text-xl font-bold text-black">
+                            <i class="fas fa-shield-halved text-gray-600"></i>
+                            Proteger a Pertalks contra o desperdício de tempo e dinheiro
+                        </h3>
+                        <p class="mt-3 text-gray-700">Através das captações, ativações e otimizações, nós receberemos muitas objeções, muitas sugestões, entre outras coisas. E nós vamos captar esses dados em massa, identificar padrões, problemas e soluções, e repetir o processo várias vezes, para que, através das análises, obtenhamos mais clareza ao investir.</p>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                        <h3 class="flex items-center gap-3 text-xl font-bold text-black">
+                             <i class="fas fa-handshake text-gray-600"></i>
+                            Aumentar a credibilidade com os investidores e com o mercado
+                        </h3>
+                        <p class="mt-3 text-gray-700">Junto a cada contato com clientes, vamos captar fotos, vídeos e depoimentos em grande quantidade e utilizar esse material para desenvolver a presença digital estratégica que a Pertalks precisa.</p>
+                    </div>
+
+                    <hr class="my-10 border-gray-200">
+
+                    <h3 class="text-xl font-bold text-black mb-4">E o que nós vamos buscar agora não é uma operação perfeita ou um faturamento de 20 mil reais...<br>O que a Pertalks precisa é:</h3>
+                    <ul class="action-list space-y-4 text-gray-700">
+                        <li><strong>Aprender a vender a Pertalks</strong> com testes reais, tanto no B2B quanto no B2C.</li>
+                        <li><strong>Validar e entender profundamente</strong> a demanda disponível no mercado.</li>
+                        <li><strong>Vender as soluções da Pertalks</strong> (mesmo que a gente dê reembolso depois, o que é maravilhoso para o aprendizado).</li>
+                        <li><strong>Ganhar alcance, reconhecimento e credibilidade</strong> através de associação estratégica.</li>
+                    </ul>
+
+                    <hr class="my-10 border-gray-200">
+                    
+                    <h3 class="text-xl font-bold text-black mb-4">Para no final do projeto:</h3>
+                     <ul class="action-list space-y-4 text-gray-700">
+                        <li><strong>Sabermos exatamente onde investir</strong> tempo e dinheiro.</li>
+                        <li><strong>Mostrar para os investidores</strong> que a Pertalks não é só boa em falar, mas também em executar.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 7: Minha Entrega -->
+        <section id="minha_entrega" class="w-full bg-black text-white py-20 px-6 flex items-center">
+            <div class="container mx-auto max-w-4xl">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mt-2">Entregáveis</h2>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-xl shadow-lg text-left">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Construção de ativos</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-200 mb-6">
+                        <li>Funil de vendas</li>
+                        <li>Base de dados robusta</li>
+                        <li>Framework de otimizações</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-white mb-4">Execução e suporte estratégico</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg text-gray-200">
+                        <li>Comunicação direta e transparência</li>
+                        <li>Capacidade de execução técnica sob demanda</li>
+                        <li>Decks em inglês e português</li>
+                        <li>Análise técnica de resultados e entrega de relatórios</li>
+                        <li>Entrega de nova estratégia, após finalizar a execução do projeto completo</li>
+                        <li>Gerenciamento de resultados com interface de BI</li>
+                        <li>Gestão de projeto com KPIs</li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-gray-700 text-center">
+                        <p class="text-gray-300 text-lg">Por um preço mínimo de R$ 5.000, incluindo os custos de execução.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 8: Meu Compromisso -->
+        <section id="meu_compromisso" class="w-full bg-white py-20 px-6 flex items-center">
+            <div class="container mx-auto max-w-4xl">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-black mt-2">Nosso acordo de parceria</h2>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center gap-8">
+                     <div class="text-center p-6">
+                        <i class="fas fa-briefcase text-5xl text-gray-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Compromisso com o B2B</h3>
+                        <p class="text-gray-500">Não negligenciar ou adiar o desenvolvimento B2B.</p>
+                    </div>
+                     <div class="text-center p-6">
+                        <i class="fas fa-inbox text-5xl text-gray-700 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Comunicação ágil</h3>
+                        <p class="text-gray-500">Atenção nos relatórios e mensagens, enviadas no dia a dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 9: Overview do Projeto -->
+        <section id="overview_projeto" class="w-full bg-black text-white py-20 px-6">
+             <div class="container mx-auto max-w-4xl text-left space-y-6 leading-relaxed">
+                 <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mt-2">Visão geral do projeto</h2>
+                 </div>
+                 <p class="text-lg text-gray-300 text-center">75 dias de projeto. Com uma estratégia técnica e detalhista que, ao mesmo tempo, é simples de ser executada quando se tem os frameworks e processos necessários.</p>
+                 
+                 <div class="grid md:grid-cols-3 gap-8 text-center pt-6">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 flex items-center justify-center gap-2"><i class="fas fa-cogs"></i>5 dias de preparação técnica</h3>
+                        <p class="text-sm text-gray-400">Maximizar o aproveitamento do tempo, a utilização dos recursos financeiros e garantir o máximo de produtividade.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 flex items-center justify-center gap-2"><i class="fas fa-people-arrows"></i>55 dias de execução prática</h3>
+                        <p class="text-sm text-gray-400">Focar na metodologia de desenvolvimento acelerado, gerando dados e validando a estratégia no mercado real.</p>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2 flex items-center justify-center gap-2"><i class="fas fa-clipboard-check"></i>15 dias de encerramento técnico</h3>
+                        <p class="text-sm text-gray-400">Consolidar aprendizados, analisar dados e preparar os entregáveis finais para os próximos passos da empresa.</p>
+                    </div>
+                 </div>
+
+                 <div class="space-y-8 pt-10">
+                    <div class="bg-gray-900/50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold text-white">5 dias de preparação técnica</h4>
+                        <p class="timeline-description">Nos primeiros 5 dias, vamos estruturar os ambientes digitais de dados, canais de comunicação, lista de captações estratégicas, apresentação para as captações, entre outros aspectos.</p>
+                    </div>
+                    <div class="bg-gray-900/50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold text-white">55 dias de execução prática</h4>
+                        <p class="timeline-description">Aplicando a metodologia de desenvolvimento acelerado sustentável, vamos executar a estratégia, revezando entre captações, ativações e otimizações para aumentar cada vez mais a conversão do funil de vendas, conforme aplicamos testes em massa.</p>
+                    </div>
+                    <div class="bg-gray-900/50 p-6 rounded-lg">
+                        <h4 class="text-lg font-semibold text-white">15 dias de encerramento técnico</h4>
+                        <p class="timeline-description">Para fechar com chave de ouro, o período de encerramento técnico será essencial para cruzar todos os dados captados, realizar as análises necessárias, desenvolver a próxima estratégia, criar os decks de apresentação e relatórios, e preparar tudo para o último Status Report de 2025.</p>
+                    </div>
+                 </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-gray-400 text-center p-4">
+    </footer>
+
+</body>
+</html>
+
